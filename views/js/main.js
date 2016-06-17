@@ -501,7 +501,8 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
   var items = document.getElementsByClassName('mover');
-  // var phase removed from the "for loop" to not be calculated
+  console.log(items.length);
+  // var phase removed from the "for loop" to not be calculated all the time
   var phase = Math.sin(document.body.scrollTop / 1250) ;
   for (var i = 0; i < items.length; i++) {
 
@@ -525,7 +526,8 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 50; i++) {
+  //reduced the number of pizzas to 30
+  for (var i = 0; i < 30; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
