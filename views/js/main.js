@@ -453,7 +453,7 @@ var resizePizzas = function(size) {
     var dx = determineDx(pizzaContainer[0], size);
     var newWidth = (pizzaContainer[0].offsetWidth + dx) + 'px';
     for (var i = 0; i < pizzaContainer.length; i++) {
-      pizzaContainer[i].style.width = newwidth;
+      pizzaContainer[i].style.width = newWidth;
     }
   }
 
@@ -502,7 +502,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
   var items = document.getElementsByClassName('mover');
-  console.log(items.length);
+
   // var phase removed from the "for loop" to not be calculated all the time
   var st = (document.body.scrollTop / 1250) ;
   for (var i = 0; i < items.length; i++) {
@@ -531,7 +531,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var screenHeight = window.screen.height;
   var numberOfPizzas = screenHeight / s * cols;
   var elem;
-  //reduced the number of pizzas to 30
+  //reducing the number of pizzas to the number stored in the variable numberOfPizzas
   for (var i = 0; i < numberOfPizzas; i++) {
     elem = document.createElement('img');
     elem.className = 'mover';
